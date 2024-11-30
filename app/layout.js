@@ -13,8 +13,13 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-	title: 'The hotel booking',
-	description: 'Created by nextjs',
+	// title: 'The hotel booking',
+	title: {
+		template: '%s Hotel booking',
+		default: 'Welcome / Hotel booking',
+	},
+	description:
+		'Luxurios cabin hotel, located in the heart of italian dolomites, surrounded by beautiful mountains and dark forest.',
 };
 
 export default function RootLayout({ children }) {
