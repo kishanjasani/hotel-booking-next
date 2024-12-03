@@ -9,7 +9,10 @@ export default function CabinCard({ cabin }) {
 		<div className="flex border-primary-800 border">
 			<div className="flex-1 relative">
 				<Image
-					src={image || "data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E"}
+					src={
+						image ||
+						"data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E"
+					}
 					fill
 					alt={`Cabin ${name}`}
 					className="object-cover border-r border-primary-800"
