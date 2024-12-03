@@ -1,4 +1,10 @@
-export default function Cabins() {
+import CabinCard from "../_components/CabinCard";
+import { getCabins } from "../_lib/data-service";
+
+export default async function Cabins() {
+
+	const cabins = await getCabins();
+
 	return (
 		<div>
 			<h1 className="text-4xl mb-5 text-accent-400 font-medium">
@@ -12,6 +18,14 @@ export default function Cabins() {
 				nature&apos;s beauty in your own little home away from home. The
 				perfect spot for a peaceful, calm vacation. Welcome to paradise.
 			</p>
+
+			{cabins.length > 0 && (
+				<div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-14">
+					{cabins.map((cabin) => (
+						<CabinCard cabin={cabin} key={cabin.id} />
+					))}
+				</div>
+			)}
 		</div>
 	);
 }
