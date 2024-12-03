@@ -1,8 +1,8 @@
 import SelectCountry from '@/app/_components/SelectCountry';
 
 export const metadata = {
-	title: 'Update Profile'
-}
+	title: 'Update Profile',
+};
 
 export default function Page() {
 	// CHANGE
