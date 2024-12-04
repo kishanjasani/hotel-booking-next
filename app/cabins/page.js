@@ -2,6 +2,11 @@ import { Suspense } from 'react';
 import CabinList from '@/app/_components/CabinList';
 import Spinner from '@/app/_components/Spinner';
 
+/**
+ * Time base validation.
+ */
+export const revalidate = 3600;
+
 export default function Cabins() {
 	return (
 		<div>
