@@ -2,6 +2,7 @@ import localFont from 'next/font/local';
 import '@/app/_styles/globals.css';
 import Navigation from './_components/Navigation';
 import Header from './_components/Header';
+import { ReservationProvider } from './_components/ReservationContext';
 
 const geistSans = localFont({
 	src: './fonts/GeistVF.woff',
@@ -31,7 +32,9 @@ export default function RootLayout({ children }) {
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
 				<Header />
-				<main className="mx-auto max-w-7xl">{children}</main>
+				<main className="mx-auto max-w-7xl">
+					<ReservationProvider>{children}</ReservationProvider>
+				</main>
 			</body>
 		</html>
 	);
