@@ -9,8 +9,8 @@ import ReservationReminder from '@/app/_components/ReservationReminder';
  */
 export const revalidate = 3600;
 
-export default function Cabins({ searchParams }) {
-	const filter = searchParams?.capacity ?? 'all';
+export default async function Cabins({ searchParams }) {
+	const filter = (await searchParams?.capacity) ?? 'all';
 
 	return (
 		<div>
